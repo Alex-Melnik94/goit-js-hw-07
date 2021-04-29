@@ -13,11 +13,22 @@ const ingredients = [
   'Приправы',
 ];
 
-ingredients.forEach(item => {
-    const itemEl = document.createElement('li')
-    itemEl.textContent = item
-    const listEl = document.querySelector('#ingredients')
-    listEl.appendChild(itemEl)
 
+const listEl = document.querySelector('#ingredients')
+
+const itemElements = ingredients.map(item => {
+  const itemEl = document.createElement('li')
+  itemEl.textContent = item
+  return itemEl
 })
+
+listEl.append(...itemElements)
+
+  
+
+
+  
+
+
+
 
